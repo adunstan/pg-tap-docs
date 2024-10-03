@@ -56,7 +56,14 @@ including at script end.
 Several methods return a hashref as a result, which will have the following
 fields:
 
-> The last 4 will be empty unless the SQL produces tuples.
+- status
+- error\_message (only if there is an error)
+- names 
+- types
+- rows
+- psqlout
+
+The last 4 will be empty unless the SQL produces tuples.
 
 # METHODS
 
@@ -65,7 +72,7 @@ fields:
     Set up a new session for the node, whhich must be a PostgreSQL::Test::Cluster
     instance. The default dbame is 'postgres'
 
-- `` PostgreSQL::Test::Session->new(connstr => $connstr \[, libdir => $libdir\]) >>
+- `PostgreSQL::Test::Session->new(connstr => $connstr [, libdir => $libdir])`
 
     Set up a new session for the connection string. If using the FFI libpq wrapper,
     $libdir must point to the directory where the libpq library is installed.
@@ -131,15 +138,3 @@ fields:
     same format as psql -A -t.
 
     Fields within tuples are separated by a "|", tuples are spearated by "\\n"
-
-# POD ERRORS
-
-Hey! **The above document had some coding errors, which are explained below:**
-
-- Around line 64:
-
-    &#x3d;over should be: '=over' or '=over positive\_number'
-
-- Around line 129:
-
-    You forgot a '=back' before '=head1'
