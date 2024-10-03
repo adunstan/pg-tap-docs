@@ -67,10 +67,10 @@ The last 4 will be empty unless the SQL produces tuples.
 
 # METHODS
 
-- `PostgreSQL::Test::Session-`new(node=> $node \[, dbname=> $dbname \])>
+- `PostgreSQL::Test::Session->new(node=> $node [, dbname=> $dbname ])`
 
     Set up a new session for the node, whhich must be a PostgreSQL::Test::Cluster
-    instance. The default dbame is 'postgres'
+    instance. The default dbame is `postgres`.
 
 - `PostgreSQL::Test::Session->new(connstr => $connstr [, libdir => $libdir])`
 
