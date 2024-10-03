@@ -46,9 +46,9 @@ PostgreSQL::Test::Session - class for a PostgreSQL libpq session
 
 # DESCRIPTION
 
-PostgreSQL::Test::Session encapsulates a libpq session for use in PostgreSQL
-TAP tests, allowing the test to connect without having to spawn \`psql\` in a
-child process. 
+`PostgreSQL::Test::Session` encapsulates a `libpq` session for use in
+PostgreSQL TAP tests, allowing the test to connect without having to spawn 
+`psql` in a child process. 
 
 The session object is automatically closed when the object goes out of scope,
 including at script end.
